@@ -6,12 +6,19 @@ export const Display = props => {
     <div style={viewType === "beautify" ? { whiteSpace: "pre-wrap" } : {}}>
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
         <button
-          className="btn btn-primary"
+          className={
+            "btn btn-primary " + (viewType === "beautify" ? "disabled" : "")
+          }
           onClick={() => changeType("beautify")}
         >
           View Beautify
         </button>
-        <button className="btn btn-primary" onClick={() => changeType("raw")}>
+        <button
+          className={
+            "btn btn-primary " + (viewType === "raw" ? "disabled" : "")
+          }
+          onClick={() => changeType("raw")}
+        >
           View Raw
         </button>
       </div>
