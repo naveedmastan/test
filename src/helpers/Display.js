@@ -11,7 +11,7 @@ export const Display = props => {
           }
           onClick={() => changeType("beautify")}
         >
-          View Beautify
+          Beautify
         </button>
         <button
           className={
